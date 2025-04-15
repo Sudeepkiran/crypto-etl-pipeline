@@ -1,0 +1,95 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\froman\fcharset0 Times-Bold;\f2\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Crypto ETL Pipeline with Python\
+\
+This repository contains a complete ETL (Extract, Transform, Load) pipeline designed to collect, clean, and store real-time cryptocurrency market data. The project is built using Python and demonstrates practical skills in data extraction from public APIs, transformation using pandas, and storage in both CSV and SQLite formats.\
+\
+Overview\
+--------\
+This pipeline connects to the CoinGecko API, retrieves data for the top 10 cryptocurrencies based on market capitalization, processes the data into a clean format, and stores it locally in two forms:\
+\
+- CSV file: crypto_data.csv\
+- SQLite database: crypto.db (table: crypto_prices)\
+\
+Technologies Used\
+-----------------\
+- Python 3\
+- pandas\
+- requests\
+- SQLite\
+- VS Code / Jupyter / Terminal\
+\
+ETL Process Breakdown\
+----------------------\
+Extract:\
+- API: CoinGecko Markets Endpoint\
+- Data: Top 10 coins in USD\
+\
+Transform:\
+- Load raw JSON data into pandas\
+- Select and rename specific columns\
+- Append current timestamp for tracking\
+\
+Load:\
+- Save the transformed data into:\
+  - A CSV file in the /data directory\
+  - A SQLite database table named "crypto_prices"\
+\
+Running the Project\
+-------------------\
+1. Clone the repository:\
+   git clone https://github.com/yourusername/crypto-etl-pipeline.git\
+   cd crypto-etl-pipeline\
+\
+2. Install dependencies:\
+   pip install -r requirements.txt\
+\
+3. Execute the script:\
+   python scripts/crypto_etl.py\
+\
+Project Structure\
+-----------------\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 crypto-etl-pipeline/ data/ Output files (CSV and SQLite DB) scripts/ Python script crypto_etl.py requirements.txt Project dependencies README.md Project documentation
+\f2\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+Sample Output (CSV)\
+-------------------\
+name: Bitcoin\
+symbol: btc\
+price: 64750.32\
+market_cap: 1.2T\
+total_volume: 34.5B\
+timestamp: 2025-04-14 15:30:22\
+\
+Future Improvements\
+-------------------\
+- Automate with cron or Airflow\
+- Add logging and error handling\
+- Push data to cloud platforms (AWS, BigQuery, etc.)\
+- Build a dashboard using Streamlit or Tableau\
+\
+Author\
+------\
+Sudeep Kiran  \
+Data Engineering & Analytics Enthusiast  \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 GitHub: https://github.com/Sudeepkiran\uc0\u8232 LinkedIn: https://www.linkedin.com/in/sudeepkirang/
+\f2\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+}
